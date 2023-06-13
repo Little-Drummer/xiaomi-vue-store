@@ -50,7 +50,7 @@
         <div class="goods-list">
           <ul>
             <li v-for="item in getCheckGoods" :key="item.id">
-              <img :src="$target + item.productImg" />
+              <img :src="item.productImg" />
               <span class="pro-name">{{item.productName}}</span>
               <span class="pro-price">{{item.price}}元 x {{item.num}}</span>
               <span class="pro-status"></span>
@@ -137,9 +137,15 @@ export default {
       address: [
         {
           id: 1,
-          name: "吴同学",
-          phone: "13333634203",
-          address: "湖北省 黄冈市 红安县"
+          name: "王同学",
+          phone: "111111111111",
+          address: "河北省 保定市 保定理工学院"
+        },
+        {
+          id: 2,
+          name: "张同学",
+          phone: "222222222222",
+          address: "河北省 保定市 保定理工学院"
         }
       ]
     };

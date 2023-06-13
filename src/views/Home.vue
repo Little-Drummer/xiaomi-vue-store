@@ -27,7 +27,7 @@
           <div class="box-bd">
             <div class="promo-list">
               <router-link to>
-                <img :src="$target +'public/imgs/phone/phone.png'" />
+                <img src="imgs/phone/phone.png" />
               </router-link>
             </div>
             <div class="list">
@@ -45,7 +45,7 @@
           <div class="box-bd">
             <div class="promo-list">
               <router-link to>
-                <img :src="$target +'public/imgs/phone/phone.png'" />
+                <img src="imgs/phone/phone.png" />
               </router-link>
             </div>
             <div class="list">
@@ -71,10 +71,10 @@
             <div class="promo-list">
               <ul>
                 <li>
-                  <img :src="$target +'public/imgs/accessory/accessory-promo1.png'" alt />
+                  <img src="imgs/accessory/accessory-promo1.png" alt />
                 </li>
                 <li>
-                  <img :src="$target +'public/imgs/accessory/accessory-promo2.png'" alt />
+                  <img src="imgs/accessory/accessory-promo2.png" alt />
                 </li>
               </ul>
             </div>
@@ -92,7 +92,22 @@
 export default {
   data() {
     return {
-      carousel: "", // 轮播图数据
+      carousel: [{
+        "carouselId": 1,
+        "imgPath": "imgs/cms_1.jpg",
+        "describes": "千元4800万四摄"
+      }, {
+        "carouselId": 2,
+        "imgPath": "imgs/cms_2.jpg",
+        "describes": "6400万全场景四摄"
+      }, {
+        "carouselId": 3,
+        "imgPath": "imgs/cms_3.jpg",
+        "describes": "小米10"
+      }, {
+        "carouselId": 4,
+        "imgPath": "imgs/cms_4.jpg",
+        "describes": "智能洗烘，省心省力"}], // 轮播图数据
       phoneList: "", // 手机商品列表
       miTvList: "", // 小米电视商品列表
       // applianceList: "", // 家电商品列表
@@ -149,14 +164,14 @@ export default {
   },
   created() {
     // 获取轮播图数据
-    this.$axios
-      .get("/api/resources/carousel", {})
-      .then(res => {
-        this.carousel = res.data.data;
-      })
-      .catch(err => {
-        return Promise.reject(err);
-      });
+    // this.$axios
+    //   .get("/api/resources/carousel", {})
+    //   .then(res => {
+    //     this.carousel = res.data.data;
+    //   })
+    //   .catch(err => {
+    //     return Promise.reject(err);
+    //   });
     // 获取各类商品数据
     this.getPromo(1, "phoneList");
     this.getPromo(2, "miTvList");

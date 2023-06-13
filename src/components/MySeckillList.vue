@@ -17,7 +17,7 @@
           <i class="el-icon-close delete" slot="reference" v-show="isDelete"></i>
         </el-popover>
         <router-link :to="{ path: '/goods/seckillDetails', query: {seckillID:item.seckillId,productID:item.productId} }">
-          <img :src="$target +item.productPicture" alt />
+          <img :src="item.productPicture" alt />
           <h2>{{item.productName}}</h2>
           <h3>{{item.productTitle}}</h3>
           <p>
