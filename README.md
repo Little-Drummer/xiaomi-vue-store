@@ -10,4 +10,4 @@
 
 ## 具体项目内容以及部署请移步
 
-https://github.com/ZeroWdd/Xiaomi
+https://github.com/Little-Drummer/Xiaomi-SpringBoot
